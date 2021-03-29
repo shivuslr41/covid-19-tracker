@@ -5,7 +5,7 @@ import CountUp from 'react-countup'
 
 function InfoBox({ title, cases, total, active, isRed, isGreen, isGrey, ...props }) {
     if (!total) {
-        return "loading..."
+        return null
     }
     return (
         <Card className={`infoBox ${active && "infoBox--selected"} ${isRed && "infoBox--red"} ${isGreen && "infoBox--green"} ${isGrey && "infoBox--grey"}`} onClick={props.onClick}>
