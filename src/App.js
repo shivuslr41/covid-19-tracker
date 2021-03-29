@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react'
 import InfoBox from './InfoBox'
 import MapContainer from './Map'
 import Table from './Table'
-import { sortData, prettyPrintStat } from './util'
+import { sortData } from './util'
 import LineGraph from './LineGraph'
 import 'leaflet/dist/leaflet.css'
 
@@ -96,24 +96,24 @@ function App() {
                         active={casesType === "cases"}
                         isRed
                         title="Coronavirus Cases"
-                        cases={prettyPrintStat(countryInfo.todayCases)}
-                        total={prettyPrintStat(countryInfo.cases)}
+                        cases={countryInfo.todayCases}
+                        total={countryInfo.cases}
                     />
                     <InfoBox
                         onClick={(e) => setCasesType("recovered")}
                         active={casesType === "recovered"}
                         isGreen
                         title="Recovered"
-                        cases={prettyPrintStat(countryInfo.todayRecovered)}
-                        total={prettyPrintStat(countryInfo.recovered)}
+                        cases={countryInfo.todayRecovered}
+                        total={countryInfo.recovered}
                     />
                     <InfoBox
                         onClick={(e) => setCasesType("deaths")}
                         active={casesType === "deaths"}
                         isGrey
                         title="Deaths"
-                        cases={prettyPrintStat(countryInfo.todayDeaths)}
-                        total={prettyPrintStat(countryInfo.deaths)}
+                        cases={countryInfo.todayDeaths}
+                        total={countryInfo.deaths}
                     />
                 </div>
 
