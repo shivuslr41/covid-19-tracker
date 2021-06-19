@@ -26,7 +26,7 @@ function InfoBox({ title, cases, total, active, isRed, isGreen, isGrey, ...props
                         duration={3}
                         separator=","
                     />
-                    <span>  Total Cases</span>
+                    <span>  (Total {title})</span>
                 </Typography>
             </CardContent>
         </Card>

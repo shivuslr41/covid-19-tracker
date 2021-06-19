@@ -19,8 +19,8 @@ function App() {
     const [country, setCountry] = useState("worldwide")
     const [countryInfo, setCountryInfo] = useState([])
     const [tableData, setTableData] = useState([])
-    const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 })
-    const [mapZoom, setMapZoom] = useState(3)
+    const [mapCenter, setMapCenter] = useState({ lat: 30, lng: 15 })
+    const [mapZoom, setMapZoom] = useState(2)
     const [mapCountries, setMapCountries] = useState([])
     const [casesType, setCasesType] = useState("cases");
 
@@ -95,7 +95,7 @@ function App() {
                         onClick={(e) => setCasesType("cases")}
                         active={casesType === "cases"}
                         isRed
-                        title="Coronavirus Cases"
+                        title="Cases"
                         cases={countryInfo.todayCases}
                         total={countryInfo.cases}
                     />

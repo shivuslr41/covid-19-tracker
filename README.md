@@ -1,5 +1,9 @@
 # COVID-19 Tracker
 
+### `npm install`
+
+Installs the required dependencies.
+
 ### `npm start`
 
 Runs the app in the development mode.\
