@@ -6,7 +6,7 @@ function Table({countries}) {
     return (
         <div className="table">
             {countries.map(({country, cases}) => (
-                <tr>
+                <tr key={country.name}>
                     <td>{country}</td>
                     <td>
                         <strong>{numeral(cases).format("0,0")}</strong>
